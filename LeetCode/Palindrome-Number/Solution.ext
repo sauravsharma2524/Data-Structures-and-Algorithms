@@ -1,3 +1,12 @@
-Input: x = 121
-Output: true
-Explanation: 121 reads as 121 from left to right and from right to left.
+class Solution {
+    public boolean isPalindrome(int x) {
+        int input = x;
+        int ans = 0;
+        while (input > 0){
+            int rem = input % 10;
+            ans = (ans*10) + rem;
+            input = input / 10;
+        }
+       return ans == x;
+    }
+}
